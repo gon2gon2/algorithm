@@ -1,8 +1,3 @@
-'''
-개선 방향
-1. W_paints, B_paints따로 두지 말고, B랑 W의 빈도 수를 계산해 둘 중 하나의 case만 생각하도록 수정
-
-'''
 N, M = map(int, input().split())
 tables = []
 for i in range(N):
@@ -27,7 +22,7 @@ for i in range(N):
 
 
 # 여기는 기준점
-points =[]
+points = []
 for i in range(N-7):
     for j in range(M-7):
         points.append((i,j))
