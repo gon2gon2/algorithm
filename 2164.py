@@ -1,12 +1,21 @@
 import sys
 from collections import deque
-# n = int(sys.stdin.readline())
-n=4
+n = int(sys.stdin.readline())
+
 # for n in range(1,10):
     # print("###########")
     # print(n)
     # card_q = deque(range(2,n+1,2))
-card_q = deque(range(1,n+1))
+
+if n <=2:
+    card_q = [n]
+elif n%2 == 0:
+    card_q = deque(range(2,n+1,2))
+else:
+    card_q = deque(range(2,n,2))
+    back = card_q.popleft()
+    card_q.append(back)
+
 
 
 while len(card_q) > 1:
