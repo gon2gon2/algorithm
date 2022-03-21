@@ -2,8 +2,8 @@ import sys
 sys.setrecursionlimit(10**6)
 input = sys.stdin.readline
 
-# T = int(input())
-T = 1
+T = int(input())
+# T = 1
 
 def bfs(x, y):
     '''
@@ -29,8 +29,8 @@ def bfs(x, y):
 for t in range(T):
     
     # 가로 M, 세로 N, 배추 개수 K
-    # M, N, K = map(int, input().split())
-    M, N, K = 10, 8, 17
+    M, N, K = map(int, input().split())
+    # M, N, K = 10, 8, 17
 
     cnt = 0
 
@@ -42,10 +42,10 @@ for t in range(T):
         x,y = map(int,input().split())
         graph[y][x] = 1
 
-    for i in range(N):
-        for j in range(M):
+    for i in range(N): # 세로
+        for j in range(M): # 가로
             if graph[i][j] == 1:
-                bfs(i,j)
+                bfs(j,i)
                 cnt += 1
     
     print(cnt)
